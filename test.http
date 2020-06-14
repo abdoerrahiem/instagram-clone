@@ -1,0 +1,71 @@
+GET http://localhost:5000
+
+###
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+    "name": "Abdur Rahman",
+    "email": "abdurrahman@gmail.com",
+    "password": "abdurrahman"
+}
+
+###
+POST http://localhost:5000/signin
+Content-Type: application/json
+
+{
+    "email": "abdoerrahiem@gmail.com",
+    "password": "abdoerrahiem"
+}
+
+
+###
+POST http://localhost:5000/create-post
+Content-Type: application/json
+auth_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTkyYjlkZDBkZWYzZjFiZDA1ZWI4ODUiLCJleHAiOjE1ODY2Nzc3OTh9.rk78zC65lB67f2Oc9gQRhuQ0oME2v2FfIGuG6o4ctWU
+
+{
+    "title": "My New Title",
+    "body": "My New Text"
+}
+
+###
+GET http://localhost:5000/allposts
+
+###
+GET http://localhost:5000/myposts
+auth_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTkyYjlkZDBkZWYzZjFiZDA1ZWI4ODUiLCJleHAiOjE1ODY2Nzc3OTh9.rk78zC65lB67f2Oc9gQRhuQ0oME2v2FfIGuG6o4ctWU
+
+
+###
+DELETE http://localhost:5000/delete-comment/5e96b55d065ad019548ca9d1/5e96d2bfec18b310848e2a73
+auth_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk0M2YxNjY2NTA4NjE3ZTQxNWJiOTEiLCJleHAiOjE1ODY5NDk1NTF9.DadHY3mjslumu__Wfqop9ueoZlB9q_kLE0scR0P1Rr4
+
+###
+POST http://localhost:5000/create-post
+Content-Type: application/json
+auth_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk0M2YxNjY2NTA4NjE3ZTQxNWJiOTEiLCJleHAiOjE1ODcyMjA3MDd9.oZ7GmSyRigudYyfppbKAwTkB4tvbl3ijF5y5sm-G2I4
+
+{
+    "title": "My status",
+    "body": "I don't know what to say"
+}
+
+###
+PUT http://localhost:5000/like
+Content-Type: application/json
+auth_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk0M2YxNjY2NTA4NjE3ZTQxNWJiOTEiLCJleHAiOjE1ODcyMjA3MDd9.oZ7GmSyRigudYyfppbKAwTkB4tvbl3ijF5y5sm-G2I4
+
+{
+    "postId": "5e96b55d065ad019548ca9d1"
+}
+
+###
+PUT http://localhost:5000/unlike
+Content-Type: application/json
+auth_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk0M2YxNjY2NTA4NjE3ZTQxNWJiOTEiLCJleHAiOjE1ODcyMjA3MDd9.oZ7GmSyRigudYyfppbKAwTkB4tvbl3ijF5y5sm-G2I4
+
+{
+    "postId": "5e9b03d1158aa21c18ee7039"
+}
