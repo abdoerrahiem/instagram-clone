@@ -3,7 +3,7 @@ const app = express()
 const mongoose = require('mongoose')
 const path = require('path')
 const { MONGOURI } = require('./keys')
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 
 mongoose.connect(MONGOURI, {
   useNewUrlParser: true,
